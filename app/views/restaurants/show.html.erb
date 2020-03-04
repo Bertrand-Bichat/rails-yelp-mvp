@@ -4,9 +4,10 @@
   <p><strong>address:</strong> <%= @restaurant.address %></p>
   <p><strong>Phone number:</strong> <%= @restaurant.phone_number %></p>
   <br>
-  <p><%= link_to "Add a review to this restaurant", new_restaurant_review_path(@restaurant), :class => "btn btn-primary" %></p>
   <br>
-  <p><%= link_to "Show all reviews of this restaurant", restaurant_reviews_path(@restaurant), :class => "btn btn-primary" %></p>
+  <p><%= link_to "Show all reviews of this restaurant", restaurant_reviews_path(@restaurant), :class => "btn btn-secondary" %></p>
   <br>
-  <p><%= link_to "Back to restaurants list", restaurants_path, :class => "btn btn-secondary" %></p>
+  <h2>New review</h2>
+  <br>
+  <%= render './reviews/form' %>
 </div>
