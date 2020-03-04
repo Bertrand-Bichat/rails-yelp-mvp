@@ -2,6 +2,16 @@
   <h2>New restaurant</h2>
   <br>
   <%= simple_form_for (@restaurant) do |f| %>
+    <% if @restaurant.errors.any? %>
+      <div class="errors-container">
+        <ul>
+          <% @restaurant.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <%= f.input :name %>
     <%= f.input :category %>
     <%= f.input :address %>
