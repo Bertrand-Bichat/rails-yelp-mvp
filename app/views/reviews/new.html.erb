@@ -1,0 +1,7 @@
+<div class="container">
+  <h2>New review for <%= @restaurant.name %></h2>
+  <br>
+  <%= render 'form' %>
+  <br>
+  <%= link_to "Return to the restaurant page", restaurant_path(@restaurant), :class => "btn btn-secondary" %>
+</div>

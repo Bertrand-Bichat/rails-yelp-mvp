@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>All reviews from <%= @restaurant.name %></h1>
+
+  <% @reviews.each do |review| %>
+    <div class="card">
+      <div class="card-body">
+        <p><strong>rating:</strong> <%= review.rating %></p>
+        <p><strong>content:</strong> <%= review.content %></p>
+      </div>
+    </div>
+  <% end %>
+  <br>
+  <%= link_to "Return to the restaurant page", restaurant_path(@restaurant), :class => "btn btn-primary" %>
+</div>
